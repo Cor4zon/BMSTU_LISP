@@ -1,0 +1,6 @@
+(defun flatten(lst)
+	(append '()
+		(if (atom (car lst))
+			(if (car lst) (list (car lst)))
+			(flatten (car lst)))
+		(if lst (flatten (cdr lst)))))
